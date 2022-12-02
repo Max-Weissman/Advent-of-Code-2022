@@ -27,13 +27,29 @@ let counter = () => {
                 total += cal
             }
         })
+        elves.push(total)
         max = 0
+        second = 0
+        third = 0
         elves.forEach(elf => {
-            if (elf > max){
-                max = elf
+            if (elf >= max){
+                third = second
+                second = max
+                if (elf > max){
+                    max = elf
+                }
+            }
+            else if (elf >= second){
+                third = second
+                if (elf > second){
+                    second = elf
+                }
+            }
+            else if (elf > third){
+                third = elf
             }
         })
-        console.log(max)
+        console.log(max + second + third)
     });
 }
 
