@@ -43,7 +43,6 @@ let counter = () => {
                     total += 6
                 }
             }
-            console.log(total, opp, me)
         })
         console.log(total)
     });
