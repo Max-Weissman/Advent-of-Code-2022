@@ -1,9 +1,6 @@
-const { Console } = require("console");
 var fs = require("fs");
 
 let counter = () => {
-    let array = []
-    let subArray = []
     let visits = {}
     let head = [0, 0] //head start
     let tail = [0, 0] //tail start
