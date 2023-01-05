@@ -49,10 +49,10 @@ function pathSolve(grid){
 let counter = () => {
     fs.readFile("./input.txt", "utf8", function(err, text){
         let data = text.split('\r\n')
-        for (let h = 0; h < data.length / 2; h += 0.5){
-            let i = Math.floor(h)
-            if (h.toString().slice(-2) === '.5'){
-                i = data.length - i - 1
+        for (let h = 0; h < data.length ; h++){
+            let i = h + 12
+            if (i >= data.length){
+                i = i - data.length
             }
             for (let g = 0; g < data[i].length / 2; g+= 0.5){
                 let j = Math.floor(g)
@@ -78,6 +78,7 @@ let counter = () => {
                 return true
             }
         })
+        console.log(data)
         console.log(answer.length)
     })
 }

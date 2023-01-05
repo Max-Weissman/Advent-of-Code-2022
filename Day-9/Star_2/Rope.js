@@ -69,6 +69,8 @@ let counter = () => {
                     visits[rope[9][0].toString() + '-' + rope[9][1].toString()] = true
                 }
             }
+            console.log(line)
+            console.log(rope)
         })
         console.log(Object.keys(visits).length)
     });
